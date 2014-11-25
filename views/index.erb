@@ -10,6 +10,7 @@
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
+    <script type="text/x-handlebars" data-template-name="movies">
     <nav class="header navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="brand navbar-header">
@@ -18,18 +19,21 @@
         <div class="collapse navbar-collapse">
           <form class="search navbar-form navbar-left" role="search">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              {{input
+                type="text"
+                class="form-control"
+                placeholder="Search"
+                value=query}}
             </div>
           </form>
         </div>
       </div>
     </nav>
 
-    <script type="text/x-handlebars" data-template-name="movies">
       <div class="movies container">
         <ul class="row">
-          {{#each movie in model itemController="movie"}}
-            <li class="movie col-md-2"><a href="#" class="thumbnail"><img {{bind-attr src="movie.coverUrl"}}></a></li>
+          {{#each movie in filteredMovies itemController="movie"}}
+            <li class="movie col-md-2"><a href="#" class="thumbnail"><img {{bind-attr src="movie.coverUrl"}}></a><p>{{movie.title}}</p></li>
           {{/each}}
           </ul>
         </div>
@@ -44,5 +48,6 @@
     <script src="js/router.js"></script>
     <script src="js/models/movie.js"></script>
     <script src="js/controllers/movie_controller.js"></script>
+    <script src="js/controllers/movies_controller.js"></script>
   </body>
 </html>
