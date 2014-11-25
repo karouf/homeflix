@@ -10,13 +10,13 @@
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="header navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="brand navbar-header">
           <a class="navbar-brand" href="#">Homeflix</a>
         </div>
         <div class="collapse navbar-collapse">
-          <form class="navbar-form navbar-left" role="search">
+          <form class="search navbar-form navbar-left" role="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
@@ -25,34 +25,43 @@
       </div>
     </nav>
 
-    <div class="container movies">
-      <ul class="row">
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        <li class="col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-        </ul>
+    <script type="text/x-handlebars" data-template-name="homeflix">
+      <div class="movies container">
+        <ul class="row">
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </script>
+
+    <script src="js/libs/jquery-1.11.1.min.js"></script>
+    <script src="js/libs/handlebars-v1.3.0.js"></script>
+    <script src="js/libs/ember.js"></script>
+    <script src="js/libs/ember-data.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/router.js"></script>
   </body>
 </html>
