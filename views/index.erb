@@ -12,12 +12,12 @@
   <body>
     <script type="text/x-handlebars" data-template-name="movies">
     <nav class="header navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
+      <div class="container-fluid col-lg-8 col-lg-offset-2">
         <div class="brand navbar-header">
           <a class="navbar-brand" href="#">Homeflix</a>
         </div>
-        <div class="collapse navbar-collapse">
-          <form class="search navbar-form navbar-left" role="search">
+        <div class="navbar-right">
+          <form class="search navbar-form" role="search">
             <div class="form-group">
               {{input
                 type="text"
@@ -30,10 +30,10 @@
       </div>
     </nav>
 
-      <div class="movies container">
+      <div class="movies container-fluid col-lg-8 col-lg-offset-2">
         <ul class="row">
           {{#each movie in filteredMovies itemController="movie"}}
-            <li class="movie col-md-2"><a href="#" class="thumbnail"><img {{bind-attr src="movie.coverUrl"}}></a><p>{{movie.title}}</p></li>
+            <li class="movie col-xs-5 col-sm-2 col-md-2 col-lg-2"><a href="#" class="thumbnail"><img {{bind-attr src="movie.coverUrl"}}></a><p>{{movie.title}}</p></li>
           {{/each}}
           </ul>
         </div>

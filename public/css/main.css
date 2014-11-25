@@ -5,3 +5,9 @@ li {
 .movies {
   margin-top: 6em;
 }
+
+@media (max-width: 768px) {
+  .movies {
+    margin-top: 12em;
+  }
+}
