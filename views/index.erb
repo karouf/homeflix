@@ -25,33 +25,12 @@
       </div>
     </nav>
 
-    <script type="text/x-handlebars" data-template-name="homeflix">
+    <script type="text/x-handlebars" data-template-name="movies">
       <div class="movies container">
         <ul class="row">
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
-          <li class="movie col-md-2"><a href="#" class="thumbnail"><img src="img/cover-placeholder.gif"></a></li>
+          {{#each movie in model itemController="movie"}}
+            <li class="movie col-md-2"><a href="#" class="thumbnail"><img {{bind-attr src="movie.coverUrl"}}></a></li>
+          {{/each}}
           </ul>
         </div>
       </div>
@@ -63,5 +42,7 @@
     <script src="js/libs/ember-data.js"></script>
     <script src="js/application.js"></script>
     <script src="js/router.js"></script>
+    <script src="js/models/movie.js"></script>
+    <script src="js/controllers/movie_controller.js"></script>
   </body>
 </html>
