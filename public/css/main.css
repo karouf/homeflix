@@ -6,12 +6,26 @@ li {
   margin-top: 8rem;
 }
 
+.content > .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .movies .search {
   margin-bottom: 3rem;
 }
 
-@media (min-width: 768px) {
-  .movies .search {
-    padding-left: 15px;
-  }
+.movie p {
+  display: block;
+  position: relative;
+  bottom: 50px;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 5px;
+  height: 50px;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  font-weight: bold;
+  overflow: hidden;
 }

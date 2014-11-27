@@ -36,11 +36,10 @@
           </form>
         </div>
 
-        <ul class="search-results row">
+        <div class="search-results row">
           {{#each movie in filteredMovies itemController="movie"}}
-            <li class="movie col-xs-5 col-sm-2 col-md-2 col-lg-2"><a href="#" class="thumbnail"><img {{bind-attr src="movie.coverUrl"}}></a><p>{{movie.title}}</p></li>
+            <div class="movie col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img {{bind-attr src="movie.coverUrl"}}><p>{{movie.title}}</p></a></div>
           {{/each}}
-          </ul>
         </div>
       </div>
     </script>
