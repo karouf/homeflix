@@ -15,4 +15,8 @@ Homeflix.File.FIXTURES = [
   id: 3,
     name: 'xor-lgd-lca.avi',
   },
+  {
+  id: 4,
+    name: 'liberte-oleron-filmdevacances.avi',
+  },
 ];
