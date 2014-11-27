@@ -1,3 +1,8 @@
+.nav .active, nav > li > a:hover {
+  color: #555;
+  background-color: #e7e7e7 !important;
+}
+
 li {
   list-style: none;
 }

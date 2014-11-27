@@ -16,6 +16,10 @@
           <div class="brand navbar-header">
             <a class="navbar-brand" href="#">Homeflix</a>
           </div>
+          <ul class="nav navbar-nav">
+            <li>{{#link-to 'movies'}}Movies{{/link-to}}</li>
+            <li>{{#link-to 'files'}}Files{{/link-to}}</li>
+          </ul>
         </div>
       </nav>
 
@@ -46,6 +50,27 @@
       </div>
     </script>
 
+    <script type="text/x-handlebars" data-template-name="files">
+      <div class="files row">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Filename</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each file in model}}
+              <tr>
+                <td>{{file.name}}</td>
+              </tr>
+            {{else}}
+              <p class="no-results">Nothing to see!</p>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </script>
+
     <script src="js/libs/jquery-1.11.1.min.js"></script>
     <script src="js/libs/handlebars-v1.3.0.js"></script>
     <script src="js/libs/ember.js"></script>
@@ -53,6 +78,7 @@
     <script src="js/application.js"></script>
     <script src="js/router.js"></script>
     <script src="js/models/movie.js"></script>
+    <script src="js/models/file.js"></script>
     <script src="js/controllers/movie_controller.js"></script>
     <script src="js/controllers/movies_controller.js"></script>
   </body>
