@@ -84,12 +84,14 @@
           <thead>
             <tr>
               <th>Filename</th>
+              <th>Movie</th>
             </tr>
           </thead>
           <tbody>
             {{#each file in model}}
               <tr>
                 <td>{{file.name}}</td>
+                <td>{{file.movie.title}}</td>
               </tr>
             {{else}}
               <p class="no-results">Nothing to see!</p>
