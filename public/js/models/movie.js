@@ -1,7 +1,7 @@
 Homeflix.Movie = DS.Model.extend({
   title: DS.attr('string'),
   cover: DS.attr('string'),
-  files: DS.hasMany('file', {async:true}),
+  files: DS.hasMany('file', {async: true}),
 });
 
 Homeflix.Movie.FIXTURES = [
