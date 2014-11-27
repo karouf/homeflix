@@ -44,4 +44,9 @@ Homeflix.Movie.FIXTURES = [
     title: 'Snatch',
     cover: 'snatch.jpg',
   },
+  {
+  id: 9,
+    title: 'La jetée',
+    cover: null,
+  },
 ];
