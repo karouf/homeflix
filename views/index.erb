@@ -39,6 +39,8 @@
         <div class="search-results row">
           {{#each movie in filteredMovies itemController="movie"}}
             <div class="movie col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img {{bind-attr src="movie.coverUrl"}}><p>{{movie.title}}</p></a></div>
+          {{else}}
+            <p class="no-results">Nothing to see!</p>
           {{/each}}
         </div>
       </div>

@@ -29,3 +29,7 @@ li {
   font-weight: bold;
   overflow: hidden;
 }
+
+.no-results {
+  margin-left: 15px;
+}
