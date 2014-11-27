@@ -42,10 +42,21 @@
 
         <div class="search-results row">
           {{#each movie in filteredMovies itemController="movie"}}
-            <div class="movie col-xs-6 col-sm-2"><a href="#" class="thumbnail"><img {{bind-attr src="movie.coverUrl"}}><p>{{movie.title}}</p></a></div>
+            <div class="movie col-xs-6 col-sm-2">{{#link-to 'movie' movie class='thumbnail'}}<img {{bind-attr src="movie.coverUrl"}}><p>{{movie.title}}</p>{{/link-to}}</div>
           {{else}}
             <p class="no-results">Nothing to see!</p>
           {{/each}}
+        </div>
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="movie">
+      <div class="movie row">
+        <div class="col-xs-4">
+          <img {{bind-attr src="coverUrl"}}>
+        </div>
+        <div class="col-xs-8">
+          <h2>{{title}}</h2>
         </div>
       </div>
     </script>
