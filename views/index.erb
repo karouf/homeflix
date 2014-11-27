@@ -43,7 +43,7 @@
 
         <div class="search-results row">
           {{#each movie in filteredMovies itemController="movie"}}
-            <div class="movie col-xs-6 col-sm-2">{{#link-to 'movie' movie class='thumbnail'}}<img {{bind-attr src="movie.coverUrl"}}><p>{{movie.title}}</p>{{/link-to}}</div>
+            <div class="movie col-xs-6 col-sm-3">{{#link-to 'movie' movie class='thumbnail'}}<img {{bind-attr src="movie.coverUrl"}}><p>{{movie.title}}</p>{{/link-to}}</div>
           {{else}}
             <p class="no-results">Nothing to see!</p>
           {{/each}}
