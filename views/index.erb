@@ -106,7 +106,7 @@
                 {{#if file.hasMovie}}
                   <td>{{file.movie.title}}</td>
                 {{else}}
-                  <td><form>{{type-ahead data=movies.content name="title" selection=myMovie class="form-control" placeholder="Movie title"}}</form></td>
+                  <td><form>{{type-ahead data=movies.content name="title" selection=myMovie class="form-control" placeholder="Movie title" action="linkMovie"}}</form></td>
                 {{/if}}
               </tr>
             {{else}}
