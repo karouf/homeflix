@@ -20,6 +20,10 @@ li {
   margin-bottom: 3rem;
 }
 
+.movie img {
+  width: 100%;
+}
+
 .movie p {
   display: block;
   position: relative;
