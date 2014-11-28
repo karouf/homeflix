@@ -8,6 +8,7 @@
 
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/typeahead.css" rel="stylesheet">
   </head>
   <body>
     <script type="text/x-handlebars">
@@ -99,13 +100,13 @@
             </tr>
           </thead>
           <tbody>
-            {{#each file in model itemController="file"}}
+            {{#each file in files itemController="file"}}
               <tr>
                 <td>{{file.name}}</td>
                 {{#if file.hasMovie}}
                   <td>{{file.movie.title}}</td>
                 {{else}}
-                <td><form>{{input type="text" class="form-control" placeholder="Movie title"}}</form></td>
+                  <td><form>{{type-ahead data=movies.content name="title" selection=myMovie class="form-control" placeholder="Movie title"}}</form></td>
                 {{/if}}
               </tr>
             {{else}}
@@ -121,6 +122,8 @@
     <script src="js/libs/handlebars-v1.3.0.js"></script>
     <script src="js/libs/ember.js"></script>
     <script src="js/libs/ember-data.js"></script>
+    <script src="js/libs/typeahead.bundle.min.js"></script>
+    <script src="js/ember-typeahead.js"></script>
     <script src="js/application.js"></script>
     <script src="js/router.js"></script>
     <script src="js/models/movie.js"></script>

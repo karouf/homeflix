@@ -18,6 +18,9 @@ Homeflix.MovieRoute = Ember.Route.extend({
 
 Homeflix.FilesRoute = Ember.Route.extend({
   model: function() {
-    return this.store.find('file');
+    return Ember.RSVP.hash({
+      files: this.store.find('file'),
+      movies: this.store.find('movie'),
+    });
   }
 });
