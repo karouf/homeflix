@@ -99,10 +99,14 @@
             </tr>
           </thead>
           <tbody>
-            {{#each file in model}}
+            {{#each file in model itemController="file"}}
               <tr>
                 <td>{{file.name}}</td>
-                <td>{{file.movie.title}}</td>
+                {{#if file.hasMovie}}
+                  <td>{{file.movie.title}}</td>
+                {{else}}
+                <td><form>{{input type="text" class="form-control" placeholder="Movie title"}}</form></td>
+                {{/if}}
               </tr>
             {{else}}
               <p class="no-results">Nothing to see!</p>
@@ -123,5 +127,6 @@
     <script src="js/models/file.js"></script>
     <script src="js/controllers/movie_controller.js"></script>
     <script src="js/controllers/movies_controller.js"></script>
+    <script src="js/controllers/file_controller.js"></script>
   </body>
 </html>
