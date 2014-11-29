@@ -15,6 +15,11 @@ Homeflix.FileController = Ember.ObjectController.extend({
         file.set('movie', movie);
         file.save();
       });
+    },
+    unlinkMovie: function() {
+      var file = this.get('model');
+      file.set('movie', null);
+      file.save();
     }
   }
 });

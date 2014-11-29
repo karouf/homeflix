@@ -42,3 +42,7 @@ li {
 .no-results {
   margin-left: 15px;
 }
+
+.unlink-movie {
+  cursor: pointer;
+}

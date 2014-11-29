@@ -6,7 +6,7 @@
 
     <title>Homeflix</title>
 
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/typeahead.css" rel="stylesheet">
   </head>
@@ -104,7 +104,7 @@
               <tr>
                 <td>{{file.name}}</td>
                 {{#if file.hasMovie}}
-                  <td>{{file.movie.title}}</td>
+                  <td><span class="unlink-movie glyphicon glyphicon-remove-circle" {{action 'unlinkMovie'}}></span> {{file.movie.title}}</td>
                 {{else}}
                   <td><form>{{type-ahead data=movies.content name="title" selection=myMovie class="form-control" placeholder="Movie title" action="linkMovie"}}</form></td>
                 {{/if}}
@@ -118,7 +118,7 @@
     </script>
 
     <script src="js/libs/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/handlebars-v1.3.0.js"></script>
     <script src="js/libs/ember.js"></script>
     <script src="js/libs/ember-data.js"></script>
