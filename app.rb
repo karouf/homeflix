@@ -21,7 +21,25 @@ get '/' do
 end
 
 get '/movies' do
-  json movies: Movie.all
+  if title = params['title']
+    movies = Movie.where(title: title)
+  else
+    movies = Movie.all
+  end
+
+  json movies: movies
+end
+
+post '/movies' do
+  payload = JSON.parse(request.env["rack.input"].read)
+
+  movie = Movie.new(payload['movie'])
+
+  if  movie.save
+    json movie: movie
+  else
+    halt 400
+  end
 end
 
 get '/recordings' do
