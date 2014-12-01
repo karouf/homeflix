@@ -1,7 +1,7 @@
 Homeflix.Movie = DS.Model.extend({
   title: DS.attr('string'),
   cover: DS.attr('string'),
-  files: DS.hasMany('file', {async: true}),
+  recordings: DS.hasMany('recording', {async: true}),
 });
 
 Homeflix.Movie.FIXTURES = [
@@ -9,54 +9,54 @@ Homeflix.Movie.FIXTURES = [
   id: 1,
     title: 'Liberté-Oléron',
     cover: 'liberteoleron.jpg',
-    files: [ 4 ],
+    recordings: [ 4 ],
   },
   {
   id: 2,
     title: 'La cité de la peur',
     cover: 'lacitedelapeur.jpg',
-    files: [],
+    recordings: [],
   },
   {
   id: 3,
     title: 'Predator',
     cover: 'predator.jpg',
-    files: [],
+    recordings: [],
   },
   {
   id: 4,
     title: 'Home alone',
     cover: 'homealone.jpg',
-    files: [],
+    recordings: [],
   },
   {
   id: 5,
     title: "Don't be a menace to South Central while drinking your juice in the hood",
     cover: 'dontbeamenace.jpg',
-    files: [],
+    recordings: [],
   },
   {
   id: 6,
     title: 'Dumb & dumber',
     cover: 'dumbanddumber.jpg',
-    files: [],
+    recordings: [],
   },
   {
   id: 7,
     title: 'Rambo',
     cover: 'rambo.jpg',
-    files: [],
+    recordings: [],
   },
   {
   id: 8,
     title: 'Snatch',
     cover: 'snatch.jpg',
-    files: [],
+    recordings: [],
   },
   {
   id: 9,
     title: 'La jetée',
     cover: null,
-    files: [],
+    recordings: [],
   },
 ];

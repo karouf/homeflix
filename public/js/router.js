@@ -1,7 +1,7 @@
 Homeflix.Router.map(function() {
   this.resource('movies', { path: '/' });
   this.resource('movie', { path: '/movie/:movie_id' });
-  this.resource('files', { path: '/files' });
+  this.resource('recordings', { path: '/recordings' });
 });
 
 Homeflix.MoviesRoute = Ember.Route.extend({
@@ -16,10 +16,10 @@ Homeflix.MovieRoute = Ember.Route.extend({
   }
 });
 
-Homeflix.FilesRoute = Ember.Route.extend({
+Homeflix.RecordingsRoute = Ember.Route.extend({
   model: function() {
     return Ember.RSVP.hash({
-      files: this.store.find('file'),
+      recordings: this.store.find('recording'),
       movies: this.store.find('movie'),
     });
   }

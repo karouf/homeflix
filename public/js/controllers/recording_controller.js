@@ -1,4 +1,4 @@
-Homeflix.FileController = Ember.ObjectController.extend({
+Homeflix.RecordingController = Ember.ObjectController.extend({
   hasMovie: function() {
     if(this.get('model').get('movie').get('content') == null) {
       return false;
@@ -8,18 +8,18 @@ Homeflix.FileController = Ember.ObjectController.extend({
   }.property('model.movie'),
   actions: {
     linkMovie: function(movieTitle) {
-      var file = this.get('model');
+      var recording = this.get('model');
 
       this.store.find('movie', { title: movieTitle }).then(function(movies) {
         var movie = movies.content[0];
-        file.set('movie', movie);
-        file.save();
+        recording.set('movie', movie);
+        recording.save();
       });
     },
     unlinkMovie: function() {
-      var file = this.get('model');
-      file.set('movie', null);
-      file.save();
+      var recording = this.get('model');
+      recording.set('movie', null);
+      recording.save();
     }
   }
 });

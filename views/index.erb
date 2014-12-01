@@ -26,7 +26,7 @@
           <div class="navbar-collapse collapse" id="navbar-collapse-links">
           <ul class="nav navbar-nav">
             <li>{{#link-to 'movies'}}Movies{{/link-to}}</li>
-            <li>{{#link-to 'files'}}Files{{/link-to}}</li>
+            <li>{{#link-to 'recordings'}}Recordings{{/link-to}}</li>
           </ul>
         </div>
         </div>
@@ -71,13 +71,13 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>Files</th>
+                <th>Recordings</th>
               </tr>
             </thead>
             <tbody>
-              {{#each files}}
+              {{#each recordings}}
                 <tr>
-                  <td>{{name}}</td>
+                  <td>{{filename}}</td>
                 </tr>
               {{else}}
                 <tr>
@@ -90,8 +90,8 @@
       </div>
     </script>
 
-    <script type="text/x-handlebars" data-template-name="files">
-      <div class="files row">
+    <script type="text/x-handlebars" data-template-name="recordings">
+      <div class="recordings row">
         <table class="table table-striped">
           <thead>
             <tr>
@@ -100,13 +100,13 @@
             </tr>
           </thead>
           <tbody>
-            {{#each file in files itemController="file"}}
+            {{#each recording in recordings itemController="recording"}}
               <tr>
-                <td>{{file.name}}</td>
-                {{#if file.hasMovie}}
-                  <td><span class="unlink-movie glyphicon glyphicon-remove-circle" {{action 'unlinkMovie'}}></span> {{file.movie.title}}</td>
+                <td>{{recording.filename}}</td>
+                {{#if recording.hasMovie}}
+                  <td><span class="unlink-movie glyphicon glyphicon-remove-circle" {{action 'unlinkMovie'}}></span> {{recording.movie.title}}</td>
                 {{else}}
-                  <td><form>{{type-ahead data=movies.content name="title" selection=myMovie class="form-control" placeholder="Movie title" action="linkMovie"}}</form></td>
+                  <td><form>{{type-ahead data=movies.content name="title" selection=movieToLink class="form-control" placeholder="Movie title" action="linkMovie"}}</form></td>
                 {{/if}}
               </tr>
             {{else}}
@@ -127,9 +127,9 @@
     <script src="js/application.js"></script>
     <script src="js/router.js"></script>
     <script src="js/models/movie.js"></script>
-    <script src="js/models/file.js"></script>
+    <script src="js/models/recording.js"></script>
     <script src="js/controllers/movie_controller.js"></script>
     <script src="js/controllers/movies_controller.js"></script>
-    <script src="js/controllers/file_controller.js"></script>
+    <script src="js/controllers/recording_controller.js"></script>
   </body>
 </html>
