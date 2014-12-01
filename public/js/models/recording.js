@@ -25,3 +25,9 @@ Homeflix.Recording.FIXTURES = [
     movie: 1,
   },
 ];
+
+Homeflix.RecordingSerializer = DS.RESTSerializer.extend({
+  keyForRelationship: function(key, relationship) {
+    return key + '_id';
+  }
+});
