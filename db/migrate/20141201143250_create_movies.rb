@@ -3,7 +3,7 @@ class CreateMovies < ActiveRecord::Migration
     create_table :movies do |t|
       t.string :title, null: false
       t.string :cover
+      t.index :title
     end
-    add_index :movies, :title
   end
 end
