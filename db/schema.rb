@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141201143250) do
+ActiveRecord::Schema.define(version: 20141201150553) do
 
   create_table "movies", force: true do |t|
     t.string "title", null: false
@@ -19,5 +19,12 @@ ActiveRecord::Schema.define(version: 20141201143250) do
   end
 
   add_index "movies", ["title"], name: "index_movies_on_title"
+
+  create_table "recordings", force: true do |t|
+    t.string  "filename", null: false
+    t.integer "movie_id"
+  end
+
+  add_index "recordings", ["filename"], name: "index_recordings_on_filename"
 
 end
